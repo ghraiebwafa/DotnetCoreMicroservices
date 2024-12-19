@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{BCB15642-9EAC-40FA-A067-4C9BBDE143D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{D5D685B2-282D-4D94-B7F1-D2E7E9603DDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{E1BFB991-C8F8-41EE-8215-FB935C5E62F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5C754364-DCB4-4E6C-83DA-A83C05E13A08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouponApi", "CouponApi\CouponApi.csproj", "{73CCD970-4820-40FE-9259-1DAFA30107E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9C7589E-308B-4884-A1F9-AA3F264ED21F}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{1A2474C4-87B8-42B2-B6A3-290EABDB630F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73CCD970-4820-40FE-9259-1DAFA30107E3} = {5C754364-DCB4-4E6C-83DA-A83C05E13A08}
+		{1A2474C4-87B8-42B2-B6A3-290EABDB630F} = {BCB15642-9EAC-40FA-A067-4C9BBDE143D8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73CCD970-4820-40FE-9259-1DAFA30107E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CCD970-4820-40FE-9259-1DAFA30107E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73CCD970-4820-40FE-9259-1DAFA30107E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73CCD970-4820-40FE-9259-1DAFA30107E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2474C4-87B8-42B2-B6A3-290EABDB630F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2474C4-87B8-42B2-B6A3-290EABDB630F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2474C4-87B8-42B2-B6A3-290EABDB630F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2474C4-87B8-42B2-B6A3-290EABDB630F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

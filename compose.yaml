@@ -1,0 +1,25 @@
+﻿services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123TEst&
+      POSTGRES_DB: CouponDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: wafaaghraieb@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin123TEst&
+    ports:
+      - "8080:80"
+
+volumes:
+  postgres_data:
+  

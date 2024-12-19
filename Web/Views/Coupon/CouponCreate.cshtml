@@ -1,0 +1,46 @@
+@model CouponDto
+<form asp-action="CouponCreate" class="mt-5">
+    <div class="container border rounded shadow-lg p-5 bg-light">
+        <h1 class="text-center text-primary fw-bold mb-4">Create Coupon</h1>
+        <hr />
+
+        <div class="row g-4">
+            <div class="col-md-4 text-end">
+                <label for="couponCode" class="form-label fw-semibold fs-5">Coupon Code</label>
+            </div>
+            <div class="col-md-8">
+                <input  asp-for ="CouponCode" id="couponCode" type="text" class="form-control" placeholder="Enter coupon code" required />
+                <span asp-validation-for="CouponCode" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <label for="discountAmount" class="form-label fw-semibold fs-5">Discount Amount</label>
+            </div>
+            <div class="col-md-8">
+                <input  asp-for="DiscountAmount" id="discountAmount" type="number" class="form-control" placeholder="Enter discount amount" required />
+                <span asp-validation-for="DiscountAmount" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4 text-end">
+                <label for="minimumAmount" class="form-label fw-semibold fs-5">Minimum Amount</label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="MinAmount" id="minimumAmount" type="number" class="form-control" placeholder="Enter minimum amount" required />
+                <span asp-validation-for="MinAmount" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6 offset-md-3 d-flex justify-content-between mt-4">
+                <a asp-action="CouponIndex" class="btn btn-outline-dark px-4">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-success px-4">
+                    <i class="bi bi-check-circle"></i> Create
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}
