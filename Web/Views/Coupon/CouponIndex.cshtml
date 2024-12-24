@@ -30,7 +30,7 @@
                     <td>@((item.DiscountAmount).ToString("c"))</td>
                     <td>@((item.MinAmount).ToString("c"))</td>
                     <td class="text-center">
-                        <a href="#" class="btn btn-sm btn-outline-danger">
+                        <a asp-action="CouponDelete" asp-route-couponId="@item.CouponId" class="btn btn-sm btn-outline-danger">
                             <i class="bi bi-trash"></i> Delete
                         </a>
                     </td>

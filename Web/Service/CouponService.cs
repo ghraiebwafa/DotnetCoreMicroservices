@@ -4,60 +4,67 @@ using Web.Utility;
 
 namespace Web.Service;
 
-public class CouponService(IBaseService baseService) : ICouponService
+public class CouponService: ICouponService
 
 {
+    private readonly IBaseService _baseService;
+    public CouponService(IBaseService baseService)
+    {
+        _baseService = baseService;
+    }
     public async Task<ResponseDto?> GetCoupon(string couponCode)
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Get,
-            Url = StaticData.CouponAPIBase+"/api/coupons/"+couponCode,
+            Url = StaticData.CouponAPIBase+"/api/coupon/"+couponCode,
         });    }
 
     public async Task<ResponseDto?> GetAllCouponsAsync()
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Get,
-            Url = StaticData.CouponAPIBase+"/api/coupons",
+            Url = StaticData.CouponAPIBase+"/api/coupon",
         });
     }
 
     public async Task<ResponseDto?> GetCouponByIdAsync(int id)
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Get,
-            Url = StaticData.CouponAPIBase+"/api/coupons/"+id,
+            Url = StaticData.CouponAPIBase+"/api/coupon/GetById/"+id,
         });
     }
 
     public async Task<ResponseDto?> CreateCouponsAsync(CouponDto couponDto)
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Post,
             Data = couponDto,
-            Url = StaticData.CouponAPIBase+"/api/coupons",
+            Url = StaticData.CouponAPIBase+"/api/coupon",
         });
     }
 
     public async Task<ResponseDto?> UpdateCouponsAsync(CouponDto couponDto)
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Put,
             Data = couponDto,
-            Url = StaticData.CouponAPIBase+"/api/coupons",
+            Url = StaticData.CouponAPIBase+"/api/coupon",
         });
     }
 
     public async Task<ResponseDto?> DeleteCouponsAsync(int id)
     {
-        return await baseService.SendAsync(new RequestDto()
+        return await _baseService.SendAsync(new RequestDto()
         {
             ApiType = StaticData.ApiType.Delete,
-            Url = StaticData.CouponAPIBase+"/api/coupons/"+id,
-        });    }
+            Url = StaticData.CouponAPIBase + "/api/coupon/" + id
+        }); 
+    }
+
 }
