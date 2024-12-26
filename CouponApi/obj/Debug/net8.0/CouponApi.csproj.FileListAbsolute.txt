@@ -145,3 +145,4 @@
 /home/wafa/RiderProjects/DotnetCoreMicroservices/CouponApi/obj/Debug/net8.0/CouponApi.pdb
 /home/wafa/RiderProjects/DotnetCoreMicroservices/CouponApi/obj/Debug/net8.0/CouponApi.genruntimeconfig.cache
 /home/wafa/RiderProjects/DotnetCoreMicroservices/CouponApi/obj/Debug/net8.0/ref/CouponApi.dll
+/home/wafa/RiderProjects/DotnetCoreMicroservices/CouponApi/obj/Debug/net8.0/CouponApi.sourcelink.json

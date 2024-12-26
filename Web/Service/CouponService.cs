@@ -18,7 +18,8 @@ public class CouponService: ICouponService
         {
             ApiType = StaticData.ApiType.Get,
             Url = StaticData.CouponAPIBase+"/api/coupon/"+couponCode,
-        });    }
+        });    
+    }
 
     public async Task<ResponseDto?> GetAllCouponsAsync()
     {
